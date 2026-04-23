@@ -1,4 +1,4 @@
-package reforco_poo.bloco07;
+package reforco_poo.lista01.bloco07;
 
 import java.util.Locale;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package reforco_poo.desafio;
+package reforco_poo.lista01.desafio;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

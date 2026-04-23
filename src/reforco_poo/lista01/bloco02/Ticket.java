@@ -1,4 +1,4 @@
-package reforco_poo.bloco02;
+package reforco_poo.lista01.bloco02;
 
 public class Ticket {
 

@@ -1,4 +1,4 @@
-package reforco_poo.bloco06;
+package reforco_poo.lista01.bloco06;
 
 public class Wallet {
 

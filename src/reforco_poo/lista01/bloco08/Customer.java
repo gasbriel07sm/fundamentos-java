@@ -1,4 +1,4 @@
-package reforco_poo.bloco08;
+package reforco_poo.lista01.bloco08;
 
 public class Customer {
 

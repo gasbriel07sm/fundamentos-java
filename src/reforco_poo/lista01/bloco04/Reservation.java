@@ -1,4 +1,4 @@
-package reforco_poo.bloco04;
+package reforco_poo.lista01.bloco04;
 
 public class Reservation {
 

@@ -1,4 +1,4 @@
-package reforco_poo.desafio;
+package reforco_poo.lista01.desafio;
 
 public class Book {
 

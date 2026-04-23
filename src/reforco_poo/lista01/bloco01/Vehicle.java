@@ -1,4 +1,4 @@
-package reforco_poo.bloco01;
+package reforco_poo.lista01.bloco01;
 
 public class Vehicle {
 
