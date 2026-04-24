@@ -1,9 +1,9 @@
 package curso_nelio_alves_poo.interfaces.Exercicio01;
 
 import curso_nelio_alves_poo.interfaces.Exercicio01.entities.Contract;
-import curso_nelio_alves_poo.interfaces.Exercicio01.entities.Instaliment;
-import curso_nelio_alves_poo.interfaces.Exercicio01.service.ContractService;
-import curso_nelio_alves_poo.interfaces.Exercicio01.service.PaypalService;
+import curso_nelio_alves_poo.interfaces.Exercicio01.entities.Installment;
+import curso_nelio_alves_poo.interfaces.Exercicio01.services.ContractService;
+import curso_nelio_alves_poo.interfaces.Exercicio01.services.PayPalService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -15,28 +15,28 @@ public class Program {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-        System.out.println("Entre os dados do contrato:");
-        System.out.print("Numero: ");
+        System.out.println("Entre com os dados do contrato: ");
+        System.out.print("Número: ");
         int number = sc.nextInt();
+
         System.out.print("Data (dd/MM/yyyy): ");
-        LocalDate date = LocalDate.parse(sc.next(), fmt);
+        LocalDate data = LocalDate.parse(sc.nextLine(), dtf);
+
         System.out.print("Valor do contrato: ");
-        double totalValue = sc.nextDouble();
+        double value = sc.nextDouble();
 
-        Contract obj = new Contract(number, date, totalValue);
+        Contract contract = new Contract(number, data, value);
 
-        System.out.print("Entre com o numero de parcelas: ");
-        int n = sc.nextInt();
+        System.out.print("Entre com os números de parcelas: ");
+        int months = sc.nextInt();
 
-        ContractService contractService = new ContractService(new PaypalService());
+        ContractService contractService = new ContractService(new PayPalService());
+        contractService.processContract(contract, months);
 
-        contractService.processContract(obj, n);
-
-        System.out.println("Parcelas:");
-        for (Instaliment installment : obj.getInstallments()) {
+        System.out.println("Parcelas: ");
+        for (Installment installment : contract.getInstallments()) {
             System.out.println(installment);
         }
 

@@ -3,14 +3,13 @@ package curso_nelio_alves_poo.interfaces.Exercicio01.entities;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Instaliment {
+public class Installment {
 
     private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
     private LocalDate dueDate;
     private Double amount;
 
-    public Instaliment(LocalDate dueDate, Double amount) {
+    public Installment(LocalDate dueDate, Double amount) {
         this.dueDate = dueDate;
         this.amount = amount;
     }

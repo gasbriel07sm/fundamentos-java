@@ -8,17 +8,16 @@ import java.util.List;
 public class Contract {
 
     private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
     private Integer number;
     private LocalDate date;
     private Double totalValue;
-    List<Instaliment> instaliments;
+
+    List<Installment> installments = new ArrayList<>();;
 
     public Contract(Integer number, LocalDate date, Double totalValue) {
         this.number = number;
         this.date = date;
         this.totalValue = totalValue;
-        this.instaliments = new ArrayList<>();
     }
 
     public Integer getNumber() {
@@ -45,7 +44,7 @@ public class Contract {
         this.totalValue = totalValue;
     }
 
-    public List<Instaliment> getInstallments() {
-        return instaliments;
+    public List<Installment> getInstallments() {
+        return installments;
     }
 }
