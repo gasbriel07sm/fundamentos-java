@@ -1,6 +1,7 @@
 package reforco_poo.lista03.bloco02;
 
 import reforco_poo.lista03.bloco02.entities.CsvExporter;
+import reforco_poo.lista03.bloco02.entities.PdfExporter;
 import reforco_poo.lista03.bloco02.entities.Sale;
 import reforco_poo.lista03.bloco02.entities.TxtExporter;
 
@@ -23,6 +24,7 @@ public class Program {
         List<Sale> list = new ArrayList<>();
         CsvExporter csvExporter = new CsvExporter();
         TxtExporter txtExporter = new TxtExporter();
+        PdfExporter pdfExporter = new PdfExporter();
 
         String filePath = "C:\\Users\\Pagee\\Downloads\\teste";
 
@@ -36,7 +38,8 @@ public class Program {
         list.add(s3);
         list.add(s4);
 
-        csvExporter.export(list, filePath);
+//        csvExporter.export(list, filePath);
+        pdfExporter.export(list, filePath);
 
         System.out.println(csvExporter.formatName() + " (" + list.size() + " records)");
         System.out.println("Preview (first 5 lines):");
